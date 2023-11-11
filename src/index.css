@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+  display: none;
+}
+@layer components {
+  .bg_gradient {
+    @apply bg-gradient-to-r from-[#2f80ed] to-[#56ccf2];
+    background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+    background: #56ccf2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2f80ed,
+      #56ccf2
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2f80ed,
+      #56ccf2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .text_gradient_card {
+    background-image: linear-gradient(-40deg, #b721ff 0%, #21d4fd 100%);
+    background-color: #19c5d9;
+  }
+}
+.bg-gradient {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  opacity: 0.3;
+  background-color: #19c5d9;
+}
+.mona-sans {
+  font-family: "Mona-Sans", serif;
+}
+.text_gradient {
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #333399,
+    #ff00cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #333399,
+    #ff00cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text_gradient_header {
+  background-image: linear-gradient(to bottom, #ffffff, #202020);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.under_score {
+  width: 135px;
+  height: 3px;
+  background-color: #19c5d9;
+  background-image: linear-gradient(-40deg, #b721ff 0%, #21d4fd 100%);
+  position: absolute;
+  top: 35px;
+  left: 40.5rem;
+}
+@media screen and (min-width: 768px) {
+  .under_score {
+    left: 10rem;
+  }
+}
+.bg_header {
+  background-color: rgba(25, 198, 217, 0.562);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
